@@ -5,9 +5,16 @@ $(document).ready(function() {
 	initializePage();
 });
 
+
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	// your code here
+	$('.likeBtn').click(clickHandler);
+}
+
+function clickHandler(e) {
+	e.preventDefault();
+	ga('create','UA-114634575-1','auto');
+	ga("send", "event", 'like', 'click');
 }
